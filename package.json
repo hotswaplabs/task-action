@@ -1,0 +1,18 @@
+{
+  "name": "task-action",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hotswaplabs/task-action.git",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "got": "^12.0.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3"
+  }
+}

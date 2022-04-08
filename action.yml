@@ -1,0 +1,15 @@
+name: 'Send Task to Tasker'
+description: 'Submits a new task to tasker'
+inputs:
+  source:
+    description: 'The source id of the repository'
+    required: true
+  command:
+    description: 'The command to call in the source'
+    required: true
+  token:
+    description: 'The token to use to access the Tasker API'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
