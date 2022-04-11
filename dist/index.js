@@ -7564,6 +7564,9 @@ try {
 	const source = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('source', { required: true })
 	const command = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('command', { required: true })
 	const token = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('token', { required: true })
+	const envJSON = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('envJSON', { required: false })
+
+	envJSON = JSON.parse(envJSON)
 
 	await got__WEBPACK_IMPORTED_MODULE_1__/* ["default"].post */ .ZP.post('https://www.tasker.sh/api/queues/default/tasks', {
 		headers: {
@@ -7572,7 +7575,8 @@ try {
 		json: {
 			task_type: "dispatch", 
 			source,
-			command, 
+			command,
+			env: envJSON
 		}
 	})
 
