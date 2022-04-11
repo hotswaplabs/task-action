@@ -5,7 +5,9 @@ try {
 	const source = core.getInput('source', { required: true })
 	const command = core.getInput('command', { required: true })
 	const token = core.getInput('token', { required: true })
-	const env = core.getInput('env', { required: false })
+	const envJSON = core.getInput('envJSON', { required: false })
+
+	envJSON = JSON.parse(envJSON)
 
 	await got.post('https://www.tasker.sh/api/queues/default/tasks', {
 		headers: {
@@ -15,7 +17,7 @@ try {
 			task_type: "dispatch", 
 			source,
 			command,
-			env
+			env: envJSON
 		}
 	})
 
