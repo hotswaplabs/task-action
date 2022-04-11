@@ -5,7 +5,7 @@ try {
 	const source = core.getInput('source', { required: true })
 	const command = core.getInput('command', { required: true })
 	const token = core.getInput('token', { required: true })
-	const envJSON = core.getInput('envJSON', { required: false })
+	let envJSON = core.getInput('envJSON', { required: false })
 
 	envJSON = JSON.parse(envJSON)
 
