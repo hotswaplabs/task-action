@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "build": "ncc build index.js -o dist --license licenses.txt"
   },
   "dependencies": {
@@ -13,6 +14,7 @@
     "got": "^12.0.3"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.33.3"
+    "@vercel/ncc": "^0.33.3",
+    "husky": "^7.0.0"
   }
 }
