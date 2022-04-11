@@ -17,7 +17,7 @@ try {
 			task_type: "dispatch", 
 			source,
 			command,
-			env: envJSON
+			env_vars: envJSON
 		}
 	})
 
