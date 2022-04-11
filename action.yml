@@ -10,6 +10,10 @@ inputs:
   token:
     description: 'The token to use to access the Tasker API'
     required: true
+  env:
+    description: 'Environment variables your task needs to access'
+    required: false
+    default: {}
 runs:
   using: 'node16'
   main: 'index.js'
